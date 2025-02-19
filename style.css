@@ -1,4 +1,90 @@
-html {
-  height: 100%;
-  width: 100%;
+/* This is a comment.
+   You can use comments to explain your code or to disable parts of it. */
+
+/* This is a selector.
+   It selects all elements with the tag name 'body'. */
+body {
+  /* This is a declaration.
+     It sets the background color of the body element to white. */
+  background-color: white;
+  /* This is another declaration.
+     It sets the font family of the body element to Arial. */
+  font-family: Arial, sans-serif;
+}
+
+/* This is a selector.
+   It selects all elements with the class name 'container'. */
+.container {
+  /* This is a declaration.
+     It sets the width of the container element to 80%. */
+  width: 80%;
+  /* This is another declaration.
+     It sets the margin of the container element to 0 auto.
+     This centers the container horizontally on the page. */
+  margin: 0 auto;
+}
+
+/* This is a selector.
+   It selects all elements with the tag name 'h1'. */
+h1 {
+  /* This is a declaration.
+     It sets the text-align of the h1 element to center. */
+  text-align: center;
+}
+
+/* This is a selector.
+   It selects all elements with the tag name 'p'. */
+p {
+  /* This is a declaration.
+     It sets the line-height of the p element to 1.5. */
+  line-height: 1.5;
+}
+
+/* This is a selector.
+   It selects all elements with the class name 'button'. */
+.button {
+  /* This is a declaration.
+     It sets the background color of the button element to blue. */
+  background-color: blue;
+  /* This is another declaration.
+     It sets the color of the button element to white. */
+  color: white;
+  /* This is another declaration.
+     It sets the padding of the button element to 10 pixels. */
+  padding: 10px 20px;
+  /* This is another declaration.
+     It sets the border of the button element to none. */
+  border: none;
+  /* This is another declaration.
+     It sets the cursor of the button element to pointer. */
+  cursor: pointer;
+  /* This is another declaration.
+     It sets the font-size of the button element to 16 pixels. */
+  font-size: 16px;
+  /* This is another declaration.
+     It sets the font-weight of the button element to bold. */
+  font-weight: bold;
+  /* This is another declaration.
+     It sets the text-align of the button element to center. */
+  text-align: center;
+  /* This is another declaration.
+     It sets the text-decoration of the button element to none. */
+  text-decoration: none;
+  /* This is another declaration.
+     It sets the display of the button element to inline-block. */
+  display: inline-block;
+  /* This is another declaration.
+     It sets the border-radius of the button element to 5 pixels. */
+  border-radius: 5px;
+  /* This is another declaration.
+     It sets the transition of the button element to all properties in 0.3 seconds. */
+  transition: all 0.3s;
+}
+
+/* This is a selector.
+   It selects all elements with the class name 'button' when the mouse hovers over it. */
+.button:hover {
+  /* This is a declaration.
+     It sets the background color of the button element to dark blue. */
+  background-color: darkblue;
 }
