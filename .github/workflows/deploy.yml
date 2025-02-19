@@ -16,7 +16,7 @@ jobs:
     - name: Configurer SSH
       run: |
         mkdir -p ~/.ssh
-        echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+        echo "${{ secrets.REPIT_SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
         chmod 600 ~/.ssh/id_rsa
         ssh-keyscan -H access894124239.webspace-data.io > ~/.ssh/known_hosts
 
@@ -25,7 +25,5 @@ jobs:
         ssh u106767242@access894124239.webspace-data.io << 'EOF'
           cd /kunden/homepages/46/d894124239/htdocs/IllLovingDrivers
           git pull origin preprod
-          composer install --no-dev --optimize-autoloader
-          php bin/console cache:clear
         EOF
 
