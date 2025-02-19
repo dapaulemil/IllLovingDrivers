@@ -1,90 +1,167 @@
-/* This is a comment.
-   You can use comments to explain your code or to disable parts of it. */
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-/* This is a selector.
-   It selects all elements with the tag name 'body'. */
 body {
-  /* This is a declaration.
-     It sets the background color of the body element to white. */
-  background-color: white;
-  /* This is another declaration.
-     It sets the font family of the body element to Arial. */
-  font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
 }
 
-/* This is a selector.
-   It selects all elements with the class name 'container'. */
-.container {
-  /* This is a declaration.
-     It sets the width of the container element to 80%. */
-  width: 80%;
-  /* This is another declaration.
-     It sets the margin of the container element to 0 auto.
-     This centers the container horizontally on the page. */
-  margin: 0 auto;
+/* Header */
+header {
+    background-color: #2c3e50;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-/* This is a selector.
-   It selects all elements with the tag name 'h1'. */
-h1 {
-  /* This is a declaration.
-     It sets the text-align of the h1 element to center. */
-  text-align: center;
+header h1 {
+    color: white;
+    text-align: center;
+    margin-bottom: 1rem;
 }
 
-/* This is a selector.
-   It selects all elements with the tag name 'p'. */
-p {
-  /* This is a declaration.
-     It sets the line-height of the p element to 1.5. */
-  line-height: 1.5;
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 2rem;
 }
 
-/* This is a selector.
-   It selects all elements with the class name 'button'. */
-.button {
-  /* This is a declaration.
-     It sets the background color of the button element to blue. */
-  background-color: blue;
-  /* This is another declaration.
-     It sets the color of the button element to white. */
-  color: white;
-  /* This is another declaration.
-     It sets the padding of the button element to 10 pixels. */
-  padding: 10px 20px;
-  /* This is another declaration.
-     It sets the border of the button element to none. */
-  border: none;
-  /* This is another declaration.
-     It sets the cursor of the button element to pointer. */
-  cursor: pointer;
-  /* This is another declaration.
-     It sets the font-size of the button element to 16 pixels. */
-  font-size: 16px;
-  /* This is another declaration.
-     It sets the font-weight of the button element to bold. */
-  font-weight: bold;
-  /* This is another declaration.
-     It sets the text-align of the button element to center. */
-  text-align: center;
-  /* This is another declaration.
-     It sets the text-decoration of the button element to none. */
-  text-decoration: none;
-  /* This is another declaration.
-     It sets the display of the button element to inline-block. */
-  display: inline-block;
-  /* This is another declaration.
-     It sets the border-radius of the button element to 5 pixels. */
-  border-radius: 5px;
-  /* This is another declaration.
-     It sets the transition of the button element to all properties in 0.3 seconds. */
-  transition: all 0.3s;
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
 }
 
-/* This is a selector.
-   It selects all elements with the class name 'button' when the mouse hovers over it. */
-.button:hover {
-  /* This is a declaration.
-     It sets the background color of the button element to dark blue. */
-  background-color: darkblue;
+nav a:hover {
+    color: #3498db;
+}
+
+/* Hero Section */
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 3rem;
+    background-color: #f8f9fa;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.hero-text h2 {
+    color: #2c3e50;
+    font-size: 2.5rem;
+}
+
+/* Buttons */
+button {
+    padding: 0.8rem 1.5rem;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+/* Featured Products */
+.featured-products {
+    padding: 3rem;
+}
+
+.featured-products h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #2c3e50;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.product {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+}
+
+.product img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.product h3 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+/* About Section */
+.about {
+    background-color: #f8f9fa;
+    padding: 3rem;
+    text-align: center;
+}
+
+.about h2 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+/* Footer */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero {
+        grid-template-columns: 1fr;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .hero-text h2 {
+        font-size: 2rem;
+    }
 }
