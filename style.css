@@ -1,167 +1,179 @@
-/* Reset CSS */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* [Tout le CSS précédent reste identique jusqu'à Featured Products] */
+
+/* Advertisement Banner */
+.ad-banner {
+    padding: 4rem 2rem;
+    background: var(--light-gray);
 }
 
-body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    color: #333;
-}
-
-/* Header */
-header {
-    background-color: #2c3e50;
-    padding: 1rem;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-header h1 {
-    color: white;
-    text-align: center;
-    margin-bottom: 1rem;
-}
-
-nav ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    gap: 2rem;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
-}
-
-nav a:hover {
-    color: #3498db;
-}
-
-/* Hero Section */
-.hero {
+.ad-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
-    padding: 3rem;
-    background-color: #f8f9fa;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.hero-image img {
+.ad-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    height: 300px;
+}
+
+.ad-item img {
     width: 100%;
-    height: 400px;
+    height: 100%;
     object-fit: cover;
-    border-radius: 8px;
-}
-
-.hero-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 1rem;
-}
-
-.hero-text h2 {
-    color: #2c3e50;
-    font-size: 2.5rem;
-}
-
-/* Buttons */
-button {
-    padding: 0.8rem 1.5rem;
-    background-color: #3498db;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    font-weight: bold;
-}
-
-button:hover {
-    background-color: #2980b9;
-}
-
-/* Featured Products */
-.featured-products {
-    padding: 3rem;
-}
-
-.featured-products h2 {
-    text-align: center;
-    margin-bottom: 2rem;
-    color: #2c3e50;
-}
-
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-}
-
-.product {
-    background-color: white;
-    padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     transition: transform 0.3s;
 }
 
-.product:hover {
-    transform: translateY(-5px);
+.ad-item:hover img {
+    transform: scale(1.05);
 }
 
-.product img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 4px;
-    margin-bottom: 1rem;
+.ad-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem;
+    background: linear-gradient(transparent, rgba(0,0,0,0.7));
+    color: white;
 }
 
-.product h3 {
-    color: #2c3e50;
+.ad-content h3 {
+    font-size: 1.5rem;
     margin-bottom: 0.5rem;
 }
 
-/* About Section */
-.about {
-    background-color: #f8f9fa;
-    padding: 3rem;
-    text-align: center;
+/* Testimonials Section */
+.testimonials {
+    padding: 4rem 2rem;
+    background: white;
 }
 
-.about h2 {
-    color: #2c3e50;
+.testimonials-slider {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.testimonial-card {
+    background: var(--light-gray);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+.testimonial-rating {
+    color: #f1c40f;
     margin-bottom: 1rem;
 }
 
-/* Footer */
-footer {
-    background-color: #2c3e50;
-    color: white;
-    text-align: center;
-    padding: 1.5rem;
-    margin-top: 2rem;
+.testimonial-text {
+    font-style: italic;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
 }
 
-/* Responsive Design */
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.testimonial-author img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.author-info h4 {
+    margin: 0;
+    color: var(--primary-color);
+}
+
+.author-info span {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Partners Section */
+.partners {
+    padding: 4rem 2rem;
+    background: white;
+}
+
+.partners-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2rem;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.partners-grid img {
+    width: 100%;
+    height: auto;
+    filter: grayscale(100%);
+    transition: filter 0.3s;
+}
+
+.partners-grid img:hover {
+    filter: grayscale(0%);
+}
+
+/* Promotional Banner */
+.promo-banner {
+    background: var(--accent-color);
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+
+.promo-content h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.promo-button {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background: white;
+    color: var(--accent-color);
+    text-decoration: none;
+    border-radius: 25px;
+    margin-top: 1rem;
+    font-weight: bold;
+    transition: transform 0.3s;
+}
+
+.promo-button:hover {
+    transform: translateY(-2px);
+}
+
+/* Responsive Design Additions */
 @media (max-width: 768px) {
-    .hero {
+    .ad-grid {
         grid-template-columns: 1fr;
     }
 
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
+    .partners-grid {
+        grid-template-columns: repeat(3, 1fr);
     }
 
-    .hero-text h2 {
-        font-size: 2rem;
+    .testimonials-slider {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .partners-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
