@@ -1,24 +1,38 @@
 name: Deploy to IONOS Preprod
-
 on:
   push:
     branches:
-      - preprod  # Déploiement uniquement sur preprod
+      - preprod  # Déclenche le déploiement uniquement si un push est fait sur preprod
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout du code
-      uses: actions/checkout@v3
+      - name: Checkout du code
+        uses: actions/checkout@v3
 
-    - name: Déployer avec SSH
-      uses: appleboy/ssh-action@master
-      with:
-        host: access894124239.webspace-data.io
-        username: u106767242
-        key: ${{ secrets.REPIT_SSH_PRIVATE_KEY }}
-        script: |
-          cd /kunden/homepages/46/d894124239/htdocs/IllLovingDrivers
-          git pull origin preprod
+      - name: Configurer SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.REPIT_SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          echo "Host *
+            StrictHostKeyChecking no" > ~/.ssh/config
+          chmod 600 ~/.ssh/config
+          ssh-keyscan -H access894124239.webspace-data.io >> ~/.ssh/known_hosts
+          eval "$(ssh-agent -s)"
+          ssh-add ~/.ssh/id_rsa
+
+      - name: Tester la connexion SSH
+        run: |
+          ssh -v u106767242@access894124239.webspace-data.io "echo 'Connexion réussie !'"
+      
+      - name: Déployer sur IONOS (Préprod)
+        uses: appleboy/ssh-action@master
+        with:
+          host: access894124239.webspace-data.io
+          username: u106767242
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            cd /kunden/homepages/46/d894124239/htdocs/IllLovingDrivers
+            git pull origin preprod
