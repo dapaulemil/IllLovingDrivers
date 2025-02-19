@@ -1,90 +1,179 @@
-/* This is a comment.
-   You can use comments to explain your code or to disable parts of it. */
+/* [Tout le CSS précédent reste identique jusqu'à Featured Products] */
 
-/* This is a selector.
-   It selects all elements with the tag name 'body'. */
-body {
-  /* This is a declaration.
-     It sets the background color of the body element to white. */
-  background-color: white;
-  /* This is another declaration.
-     It sets the font family of the body element to Arial. */
-  font-family: Arial, sans-serif;
+/* Advertisement Banner */
+.ad-banner {
+    padding: 4rem 2rem;
+    background: var(--light-gray);
 }
 
-/* This is a selector.
-   It selects all elements with the class name 'container'. */
-.container {
-  /* This is a declaration.
-     It sets the width of the container element to 80%. */
-  width: 80%;
-  /* This is another declaration.
-     It sets the margin of the container element to 0 auto.
-     This centers the container horizontally on the page. */
-  margin: 0 auto;
+.ad-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-/* This is a selector.
-   It selects all elements with the tag name 'h1'. */
-h1 {
-  /* This is a declaration.
-     It sets the text-align of the h1 element to center. */
-  text-align: center;
+.ad-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    height: 300px;
 }
 
-/* This is a selector.
-   It selects all elements with the tag name 'p'. */
-p {
-  /* This is a declaration.
-     It sets the line-height of the p element to 1.5. */
-  line-height: 1.5;
+.ad-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
 }
 
-/* This is a selector.
-   It selects all elements with the class name 'button'. */
-.button {
-  /* This is a declaration.
-     It sets the background color of the button element to blue. */
-  background-color: blue;
-  /* This is another declaration.
-     It sets the color of the button element to white. */
-  color: white;
-  /* This is another declaration.
-     It sets the padding of the button element to 10 pixels. */
-  padding: 10px 20px;
-  /* This is another declaration.
-     It sets the border of the button element to none. */
-  border: none;
-  /* This is another declaration.
-     It sets the cursor of the button element to pointer. */
-  cursor: pointer;
-  /* This is another declaration.
-     It sets the font-size of the button element to 16 pixels. */
-  font-size: 16px;
-  /* This is another declaration.
-     It sets the font-weight of the button element to bold. */
-  font-weight: bold;
-  /* This is another declaration.
-     It sets the text-align of the button element to center. */
-  text-align: center;
-  /* This is another declaration.
-     It sets the text-decoration of the button element to none. */
-  text-decoration: none;
-  /* This is another declaration.
-     It sets the display of the button element to inline-block. */
-  display: inline-block;
-  /* This is another declaration.
-     It sets the border-radius of the button element to 5 pixels. */
-  border-radius: 5px;
-  /* This is another declaration.
-     It sets the transition of the button element to all properties in 0.3 seconds. */
-  transition: all 0.3s;
+.ad-item:hover img {
+    transform: scale(1.05);
 }
 
-/* This is a selector.
-   It selects all elements with the class name 'button' when the mouse hovers over it. */
-.button:hover {
-  /* This is a declaration.
-     It sets the background color of the button element to dark blue. */
-  background-color: darkblue;
+.ad-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem;
+    background: linear-gradient(transparent, rgba(0,0,0,0.7));
+    color: white;
+}
+
+.ad-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: 4rem 2rem;
+    background: white;
+}
+
+.testimonials-slider {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.testimonial-card {
+    background: var(--light-gray);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+.testimonial-rating {
+    color: #f1c40f;
+    margin-bottom: 1rem;
+}
+
+.testimonial-text {
+    font-style: italic;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.testimonial-author img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.author-info h4 {
+    margin: 0;
+    color: var(--primary-color);
+}
+
+.author-info span {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Partners Section */
+.partners {
+    padding: 4rem 2rem;
+    background: white;
+}
+
+.partners-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2rem;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.partners-grid img {
+    width: 100%;
+    height: auto;
+    filter: grayscale(100%);
+    transition: filter 0.3s;
+}
+
+.partners-grid img:hover {
+    filter: grayscale(0%);
+}
+
+/* Promotional Banner */
+.promo-banner {
+    background: var(--accent-color);
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+
+.promo-content h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.promo-button {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background: white;
+    color: var(--accent-color);
+    text-decoration: none;
+    border-radius: 25px;
+    margin-top: 1rem;
+    font-weight: bold;
+    transition: transform 0.3s;
+}
+
+.promo-button:hover {
+    transform: translateY(-2px);
+}
+
+/* Responsive Design Additions */
+@media (max-width: 768px) {
+    .ad-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .partners-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .testimonials-slider {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .partners-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }

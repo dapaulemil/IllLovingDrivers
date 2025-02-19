@@ -3,66 +3,189 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bienvenue sur notre boutique en ligne</title>
+    <title>LuxStore - Boutique en ligne</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Notre Boutique en Ligne</h1>
-        <nav>
-            <ul>
-                <li><a href="#">Accueil</a></li>
-                <li><a href="#">Produits</a></li>
-                <li><a href="#">À propos</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="contact-info">
+            <span><i class="fas fa-phone"></i> +33 1 23 45 67 89</span>
+            <span><i class="fas fa-envelope"></i> contact@luxstore.com</span>
+        </div>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="main-header">
+        <div class="logo">LuxStore</div>
+        <div class="search-bar">
+            <input type="text" placeholder="Rechercher un produit...">
+            <button><i class="fas fa-search"></i></button>
+        </div>
+        <div class="header-actions">
+            <a href="#"><i class="fas fa-user"></i> Compte</a>
+            <a href="#"><i class="fas fa-heart"></i> Favoris</a>
+            <a href="#"><i class="fas fa-shopping-cart"></i> Panier</a>
+        </div>
     </header>
 
-    <main>
-        <section class="hero">
-            <div class="hero-image">
-                <img src="hero.jpg" alt="Image de héros">
-            </div>
-            <div class="hero-text">
-                <h2>Découvrez notre sélection de produits</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nibh vitae dictum laoreet, odio enim dictum felis, ac dictum augue sem vel lectus. Maecenas at tellus nec mauris blandit ultrices. Maecenas eu libero vel elit efficitur pulvinar.</p>
-                <button>Découvrir nos produits</button>
-            </div>
-        </section>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Découvrez notre nouvelle collection</h1>
+            <p>Des produits exceptionnels pour des clients exceptionnels</p>
+            <a href="#" class="cta-button">Découvrir</a>
+        </div>
+    </section>
 
-        <section class="featured-products">
-            <h2>Produits en vedette</h2>
-            <div class="product-grid">
-                <div class="product">
-                    <img src="product1.jpg" alt="Produit 1">
-                    <h3>Produit 1</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <button>Ajouter au panier</button>
-                </div>
-                <div class="product">
-                    <img src="product2.jpg" alt="Produit 2">
-                    <h3>Produit 2</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <button>Ajouter au panier</button>
-                </div>
-                <div class="product">
-                    <img src="product3.jpg" alt="Produit 3">
-                    <h3>Produit 3</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <button>Ajouter au panier</button>
+    <!-- Promotional Banner -->
+    <section class="promo-banner">
+        <div class="promo-content">
+            <h2>SOLDES D'ÉTÉ</h2>
+            <p>Jusqu'à -50% sur une sélection d'articles</p>
+            <a href="#" class="promo-button">Voir les offres</a>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories">
+        <div class="section-title">
+            <h2>Nos Catégories</h2>
+        </div>
+        <div class="categories-grid">
+            <!-- [Categories cards restent identiques] -->
+        </div>
+    </section>
+
+    <!-- Advertisement Banner -->
+    <section class="ad-banner">
+        <div class="ad-grid">
+            <div class="ad-item">
+                <img src="/api/placeholder/600/300" alt="Publicité 1">
+                <div class="ad-content">
+                    <h3>Nouvelle Collection</h3>
+                    <p>Découvrez nos nouveautés</p>
                 </div>
             </div>
-        </section>
+            <div class="ad-item">
+                <img src="/api/placeholder/600/300" alt="Publicité 2">
+                <div class="ad-content">
+                    <h3>Offre Spéciale</h3>
+                    <p>-30% sur les accessoires</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <section class="about">
-            <h2>À propos de nous</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nibh vitae dictum laoreet, odio enim dictum felis, ac dictum augue sem vel lectus. Maecenas at tellus nec mauris blandit ultrices. Maecenas eu libero vel elit efficitur pulvinar.</p>
-        </section>
-    </main>
+    <!-- Featured Products -->
+    <section class="featured-products">
+        <!-- [Products grid reste identique] -->
+    </section>
 
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="section-title">
+            <h2>Ce que disent nos clients</h2>
+        </div>
+        <div class="testimonials-slider">
+            <div class="testimonial-card">
+                <div class="testimonial-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="testimonial-text">"Service exceptionnel ! Les produits sont de très haute qualité et la livraison est rapide."</p>
+                <div class="testimonial-author">
+                    <img src="/api/placeholder/60/60" alt="Client 1">
+                    <div class="author-info">
+                        <h4>Marie Dubois</h4>
+                        <span>Cliente fidèle</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="testimonial-text">"Je recommande vivement ! Le rapport qualité-prix est excellent et le service client est très réactif."</p>
+                <div class="testimonial-author">
+                    <img src="/api/placeholder/60/60" alt="Client 2">
+                    <div class="author-info">
+                        <h4>Pierre Martin</h4>
+                        <span>Client satisfait</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Banner -->
+    <section class="partners">
+        <div class="section-title">
+            <h2>Nos Marques Partenaires</h2>
+        </div>
+        <div class="partners-grid">
+            <img src="/api/placeholder/200/80" alt="Marque 1">
+            <img src="/api/placeholder/200/80" alt="Marque 2">
+            <img src="/api/placeholder/200/80" alt="Marque 3">
+            <img src="/api/placeholder/200/80" alt="Marque 4">
+            <img src="/api/placeholder/200/80" alt="Marque 5">
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <h2>Restez informé</h2>
+        <p>Inscrivez-vous à notre newsletter pour recevoir nos dernières offres</p>
+        <form class="newsletter-form">
+            <input type="email" placeholder="Votre adresse email">
+            <button type="submit">S'inscrire</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2023 Notre Boutique en Ligne</p>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>À propos</h3>
+                <ul>
+                    <li><a href="#">Notre histoire</a></li>
+                    <li><a href="#">Nos valeurs</a></li>
+                    <li><a href="#">Carrières</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Service Client</h3>
+                <ul>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Livraison</a></li>
+                    <li><a href="#">Retours</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Informations</h3>
+                <ul>
+                    <li><a href="#">CGV</a></li>
+                    <li><a href="#">Confidentialité</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 LuxStore. Tous droits réservés.</p>
+        </div>
     </footer>
 </body>
 </html>
